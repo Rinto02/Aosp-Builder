@@ -6,7 +6,7 @@ env:
     DT_PATH: device/$OEM/$DEVICE
     VT_LINK: https://github.com/Realme-G70-Series/vendor_realme_RMX2020
     VT_PATH: vendor/$OEM/$DEVICE
-    KT_LINK: https://github.com/Rinto02/kernel_realme_RMX2020-A11
+    KT_LINK: https://github.com/Rinto02/A11-kernel_realme_RMX2020
     PLATFORM: mt6768
     KT_PATH: kernel/$OEM/$DEVICE
     TARGET: bacon
@@ -38,13 +38,11 @@ task:
       - git clone --depth=1 $DT_LINK $DT_PATH
       - git clone --depth=1 $KT_LINK $KT_PATH
       - git clone --depth=1 $VT_LINK $VT_PATH
-      - git clone --depth=1 https://github.com/Realme-G70-Series/android_packages_apps_RealmeParts -b lineage-18.1 packages/apps/RealmeParts
+      - git clone --depth=1 https://github.com/Realme-G70-Series/android_packages_apps_RealmeParts -b dot packages/apps/RealmeParts
       - git clone --depth=1 https://github.com/Realme-G70-Series/android_packages_apps_RealmeDirac -b lineage-18.1 packages/apps/RealmeDirac
       - echo "============================"
       - echo "Adding Patches!"
       - echo "============================"
-      - cd external/selinux && git fetch https://github.com/PixelExperience/external_selinux eleven && git cherry-pick 9d6ebe89430ffe0aeeb156f572b2a810f9dc98cc && cd ../..
-      - cd frameworks/av && git fetch https://github.com/phhusson/platform_frameworks_av android-11.0.0_r48-phh && git cherry-pick f0830faec98e65d4a03dba9b57b0cb2fd178e8f3 && cd ../..
       - echo "============================"
       - echo "Syncing Complete!"
       - echo "============================"
