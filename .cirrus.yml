@@ -58,7 +58,7 @@ task:
       - ccache -M 50G
       - . build/envsetup.sh
       - lunch "$LUNCH_COMBO"
-      - make bacon
+      - mka spark
      
   Upload_script:
       - echo "============================"
