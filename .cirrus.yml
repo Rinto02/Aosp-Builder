@@ -9,7 +9,7 @@ env:
     KT_LINK: https://github.com/Rinto02/A11-kernel_realme_RMX2020
     PLATFORM: mt6768
     KT_PATH: kernel/$OEM/$DEVICE
-    TARGET: bacon
+    TARGET: spark
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: spark_${DEVICE}-userdebug
     OUTPUT: Spark*.zip
