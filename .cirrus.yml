@@ -18,7 +18,7 @@ env:
     TARGET: bacon
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: arcana_${DEVICE}-ap2a-user
-    OUTPUT: Project*.zip
+    OUTPUT: Project_Arcana*.zip
 
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
